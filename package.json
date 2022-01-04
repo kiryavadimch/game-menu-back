@@ -1,0 +1,40 @@
+{
+  "name": "organsbackend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "resetDB": "node server/scripts/run.js syncDB && node server/scripts/run.js resetMigration && echo \"\nresetDB successfully completed\n\td__(-_-)__p\"",
+    "refreshDB": "npm run resetDB && migrate && echo \"\nrefreshDB successfully completed\n\td__(-_-)__b\""
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bluebird": "^3.7.1",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "debug": "^2.6.9",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.16.4",
+    "express-validator": "^6.13.0",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.5",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "migrate": "^1.6.2",
+    "mongoose": "^5.7.7",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "path": "^0.12.7",
+    "rotating-file-stream": "^1.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
